@@ -156,6 +156,9 @@
 
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+[credential]
+	helper = cache --timeout=3600
+
 # So much color
 [color]
         ui = always
@@ -203,6 +206,10 @@
 [diff "bin"]
         # Use `hexdump` to diff binary files
         textconv = hexdump -v -C
+
+[log]
+        decorate = full
+        abbrevCommit = true
 
 [pretty]
         custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
@@ -255,3 +262,6 @@
 
 [fetch]
         prune = true
+
+[gui]
+	gcwarning = false
