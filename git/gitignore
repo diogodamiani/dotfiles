@@ -12,8 +12,6 @@ Icon
 
 # Thumbnails
 ._*
-*~
-Thumbs.db
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
@@ -59,7 +57,6 @@ $RECYCLE.BIN/
 # Other
 # ---------------------------------------------------------------
 
-##
 # Git credential file
 .gitconfig.local
 
@@ -71,8 +68,8 @@ $RECYCLE.BIN/
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# Folder view configuration files
-Desktop.ini
+# Temp files
+*~
 
 # Compiled Python files
 #*.pyc
