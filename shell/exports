@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nano'
+else
+  export EDITOR='nano'
+fi
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG=en_US.UTF-8
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';
+
+# Omit duplicates and commands that begin with a space from history.
+export HISTCONTROL='ignoreboth';
+
+# -------------------------------------------------------------------------------------
+# Add color to terminal
+# from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
+# -------------------------------------------------------------------------------------
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# -------------------------------------------------------------------------------------
+# Set default blocksize for ls, df, du
+# from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
+# -------------------------------------------------------------------------------------
+export BLOCKSIZE=1k
+
+# -------------------------------------------------------------------------------------
+# Directories to be prepended to $PATH
+# -------------------------------------------------------------------------------------
+dirs_to_prepend=(
+  "$HOME/.dotfiles/bin"
+  "$HOME/.bin"
+)
+
+# Explicitly configured $PATH
+#PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+for dir in ${dirs_to_prepend[@]}; do
+  if [ -d ${dir} ]; then
+    # If these directories exist, then prepend them to existing PATH
+    PATH="${dir}:$PATH"
+  fi
+done
+
+unset dirs_to_prepend
+
+export PATH
+# -------------------------------------------------------------------------------------
