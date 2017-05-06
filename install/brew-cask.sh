@@ -8,6 +8,7 @@ brew tap caskroom/versions
 apps=(
     1password
     dash
+    docker
     dotnet
     dotnet-sdk
     dropbox
