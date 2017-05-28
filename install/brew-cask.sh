@@ -13,7 +13,7 @@ apps=(
     dotnet-sdk
     dropbox
     evernote
-    firefox
+    firefoxdeveloperedition
     franz
     gitter
     google-chrome
