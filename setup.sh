@@ -158,10 +158,10 @@ echo "done"
 # -------------------------------------------------------------------------------------
 
 declare -a FILES_TO_SYMLINK=(
-  'shell/exports'
-  'shell/aliases'
-  'shell/functions'
-  'shell/config'
+  'shell/shell_exports'
+  'shell/shell_aliases'
+  'shell/shell_functions'
+  'shell/shell_config'
   'shell/bash_profile'
   'shell/bash_prompt'
   'shell/bashrc'
