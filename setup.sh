@@ -310,7 +310,7 @@ main
 # Zsh                                                                         #
 ###############################################################################
 
-# install_zsh
+install_zsh
 
 # Install Zsh settings
 ln -s $DOTFILES_DIR/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
