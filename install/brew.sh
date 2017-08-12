@@ -14,6 +14,10 @@ fi
 
 #brew tap Goles/battery
 
+# Cask upgragrade
+# https://github.com/buo/homebrew-cask-upgrade
+brew tap buo/cask-upgrade
+
 # Make sure we’re using the latest Homebrew
 brew update
 
